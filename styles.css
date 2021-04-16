@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to left, #2f0c3f,#053235);
+}
+
+.calculator-space {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(6, 80px);
+}
+
+.calculator-space > button {
+  cursor: pointer;
+    font-size: 2rem;color: #4bbac9;
+    /* border-radius: 20px; */
+    border: 1px solid white;
+    outline: none;
+    background-color:black ; ;
+}
+.heading {
+  color: white;
+}
+.calculator-space > button:hover {
+  background-color: #333333;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  /* border-radius: 20px; */
+  background-color: rgba(0, 0, 0, .75);
+  border: 3px solid #075b61;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-tab {
+  color: rgba(255, 255, 255, .75);
+  
+  font-size: 1.5rem;
+}
+
+.output .current-tab {
+  color: white;
+  font-size: 2.5rem;
+}
